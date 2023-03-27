@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FeeTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2023-03-27T15:37:27" hostname="SKY-20201115VUU" time="0.114">
+  <properties/>
+  <testcase name="test10()" classname="FeeTest" time="0.071"/>
+  <testcase name="test11()" classname="FeeTest" time="0.001"/>
+  <testcase name="test12()" classname="FeeTest" time="0.002"/>
+  <testcase name="test13()" classname="FeeTest" time="0.002"/>
+  <testcase name="test14()" classname="FeeTest" time="0.002"/>
+  <testcase name="test15()" classname="FeeTest" time="0.001"/>
+  <testcase name="test1()" classname="FeeTest" time="0.001"/>
+  <testcase name="test2()" classname="FeeTest" time="0.002"/>
+  <testcase name="test3()" classname="FeeTest" time="0.002"/>
+  <testcase name="test4()" classname="FeeTest" time="0.001"/>
+  <testcase name="test5()" classname="FeeTest" time="0.003"/>
+  <testcase name="test6()" classname="FeeTest" time="0.002"/>
+  <testcase name="test7()" classname="FeeTest" time="0.001"/>
+  <testcase name="test8()" classname="FeeTest" time="0.001"/>
+  <testcase name="test9()" classname="FeeTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

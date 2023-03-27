@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HoldingTime.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">EquivalenceTest</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">HoldingTime.java</span></div><h1>HoldingTime.java</h1><pre class="source lang-java linenums">import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class HoldingTime {
+    private String startingTime;
+    private String endingTime;
+    private long minute;
+    public Date startT;
+    public Date endT;
+<span class="fc" id="L12">    public  HoldingTime(String startingTime,String endingTime){</span>
+<span class="fc" id="L13">        this.startingTime = startingTime;</span>
+<span class="fc" id="L14">        this.endingTime = endingTime;</span>
+<span class="fc" id="L15">        this.startT = StrToDate(this.startingTime);</span>
+<span class="fc" id="L16">        this.endT = StrToDate(this.endingTime);</span>
+<span class="fc" id="L17">    }</span>
+
+    public Date StrToDate(String str) {
+<span class="fc" id="L20">        SimpleDateFormat format = new SimpleDateFormat(&quot;yyyyMMddHHmmss&quot;);</span>
+<span class="fc" id="L21">        Date date = null;</span>
+        try {
+<span class="fc" id="L23">            date = format.parse(str);</span>
+<span class="nc" id="L24">        } catch (ParseException e) {</span>
+<span class="nc" id="L25">            e.printStackTrace();</span>
+<span class="fc" id="L26">        }</span>
+<span class="fc" id="L27">        return date;</span>
+    }
+    public String DateFormate(Date date){
+<span class="nc" id="L30">        SimpleDateFormat format = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss E&quot;);</span>
+<span class="nc" id="L31">        String sdate = format.format(date);</span>
+<span class="nc" id="L32">        return sdate;</span>
+    }
+    public long getHoldingTime(){
+        long between;
+<span class="fc" id="L36">        Calendar cal1 = Calendar.getInstance();</span>
+<span class="fc" id="L37">        cal1.setTime(startT);</span>
+<span class="fc" id="L38">        Calendar cal2 = Calendar.getInstance();</span>
+<span class="fc" id="L39">        cal2.setTime(endT);</span>
+
+<span class="fc" id="L41">        between = cal2.getTime().getTime()-cal1.getTime().getTime();</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if(between&lt;0)</span>
+<span class="fc" id="L43">            minute =( (cal2.getTime().getTime()-cal1.getTime().getTime())/1000)/60;</span>
+        else
+<span class="fc" id="L45">            minute = (between/1000+59)/60;</span>
+
+<span class="fc bfc" id="L47" title="All 4 branches covered.">        if((cal1.get(Calendar.MONTH) ==Calendar.MARCH  &amp;&amp; cal1.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY))</span>
+        {
+
+<span class="fc bfc" id="L50" title="All 4 branches covered.">            if(cal1.get(Calendar.HOUR_OF_DAY)&lt;2 &amp;&amp; cal2.get(Calendar.HOUR_OF_DAY)&gt;=3)</span>
+<span class="fc" id="L51">                minute -=60;</span>
+        }else{
+<span class="pc bpc" id="L53" title="1 of 4 branches missed.">            if((cal2.get(Calendar.MONTH) ==3 &amp;&amp; cal2.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY))</span>
+
+            {
+<span class="nc bnc" id="L56" title="All 2 branches missed.">                if(cal2.get(Calendar.HOUR_OF_DAY)&gt;3 )</span>
+<span class="nc" id="L57">                    minute -=60;</span>
+            }
+        }
+
+<span class="pc bpc" id="L61" title="3 of 8 branches missed.">        if(cal1.get(Calendar.MONTH) ==Calendar.NOVEMBER &amp;&amp; cal1.get(Calendar.DATE) &gt;= 1 &amp;&amp; cal1.get(Calendar.DATE) &lt;= 8 &amp;&amp; cal1.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY)</span>
+        {
+<span class="fc bfc" id="L63" title="All 2 branches covered.">            if(cal1.get(Calendar.HOUR_OF_DAY) ==2){</span>
+<span class="fc" id="L64">                minute +=60;</span>
+            }
+        }else{
+<span class="pc bpc" id="L67" title="7 of 8 branches missed.">            if(cal2.get(Calendar.MONTH) ==Calendar.NOVEMBER &amp;&amp; cal2.get(Calendar.DATE) &gt;= 1 &amp;&amp; cal2.get(Calendar.DATE) &lt;= 8 &amp;&amp; cal2.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY)</span>
+            {
+<span class="nc bnc" id="L69" title="All 2 branches missed.">                if(cal2.get(Calendar.HOUR_OF_DAY)==2)</span>
+                {
+<span class="nc" id="L71">                    minute +=60;</span>
+                }
+            }
+        }
+<span class="fc bfc" id="L75" title="All 4 branches covered.">        if(minute&gt;1800 || minute &lt;0){</span>
+<span class="fc" id="L76">            return -1;</span>
+        }else{
+
+<span class="fc" id="L79">            return minute;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
