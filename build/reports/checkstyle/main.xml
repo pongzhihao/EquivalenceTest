@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.44">
-<file name="F:\code\EquivalenceTest\src\main\java\HoldingTime.java">
+<file name="F:\code\TelBillTest\src\main\java\CalFee.java">
+<error line="15" column="19" severity="error" message="参数： startingTime 应定义为 final 的。" source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="15" column="40" severity="error" message="参数： endingTime 应定义为 final 的。" source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="20" column="26" severity="error" message="名称 &apos;StrToLocalDateTime&apos; 必须匹配表达式： &apos;^[a-z][a-zA-Z0-9]*$&apos; 。" source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="20" column="45" severity="error" message="参数： str 应定义为 final 的。" source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="36" column="55" severity="error" message="&apos;,&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="39" column="9" severity="error" message="&apos;if&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="39" column="31" severity="error" message="&apos;1000&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="39" column="38" severity="error" message="&apos;60&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="39" column="51" severity="error" message="&apos;60000&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="44" severity="error" message="本行字符数 126个，最多：120个。" source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="44" column="9" severity="error" message="&apos;if&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="44" column="36" severity="error" message="&apos;,&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="44" column="94" severity="error" message="&apos;,&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="44" column="126" severity="error" message="&apos;{&apos; 前应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="45" column="23" severity="error" message="&apos;60&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="46" severity="error" message="本行字符数 134个，最多：120个。" source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="46" column="16" severity="error" message="&apos;if&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="46" column="44" severity="error" message="&apos;,&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="46" column="101" severity="error" message="&apos;,&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="47" column="23" severity="error" message="&apos;60&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="52" column="35" severity="error" message="参数： localDateTime 应定义为 final 的。" source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="52" column="62" severity="error" message="&apos;,&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="52" column="63" severity="error" message="参数： zoneId 应定义为 final 的。" source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="58" column="32" severity="error" message="参数： timelast 应定义为 final 的。" source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="61" column="9" severity="error" message="&apos;if&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="61" column="39" severity="error" message="&apos;1800&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="63" column="9" severity="error" message="第 9 个字符 &apos;}&apos;应该与当前多代码块的下一部分 （if/else-if/else, do/while 或 try/catch/finally）位于同一行。" source="com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"/>
+<error line="64" column="14" severity="error" message="&apos;if&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="64" column="29" severity="error" message="&apos;20&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="19" severity="error" message="&apos;0.05&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="23" severity="error" message="&apos;*&apos; 前应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="65" column="23" severity="error" message="&apos;*&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="67" column="38" severity="error" message="&apos;20&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="67" column="41" severity="error" message="&apos;*&apos; 前应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="67" column="41" severity="error" message="&apos;*&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="67" column="42" severity="error" message="&apos;0.1&apos; 是一个魔术数字（直接常数）。" source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="F:\code\TelBillTest\src\main\java\HoldingTime.java">
 <error line="1" severity="error" message="文件未以空行结尾。" source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="10" column="17" severity="error" message="变量 &apos;startT&apos; 应定义为 private 的，并配置访问方法。" source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
 <error line="11" column="17" severity="error" message="变量 &apos;endT&apos; 应定义为 private 的，并配置访问方法。" source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
@@ -112,7 +150,7 @@
 <error line="77" column="10" severity="error" message="&apos;else&apos; 后应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
 <error line="77" column="14" severity="error" message="&apos;{&apos; 前应有空格。" source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 </file>
-<file name="F:\code\EquivalenceTest\src\main\java\TelFee.java">
+<file name="F:\code\TelBillTest\src\main\java\TelFee.java">
 <error line="1" severity="error" message="文件未以空行结尾。" source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="1" column="8" severity="error" message="无用导入 - java.io.BufferedReader 。" source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 <error line="2" column="8" severity="error" message="无用导入 - java.io.IOException 。" source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>

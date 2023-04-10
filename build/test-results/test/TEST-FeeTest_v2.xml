@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FeeTest_v2" tests="10" skipped="0" failures="0" errors="0" timestamp="2023-04-10T09:02:49" hostname="SKY-20201115VUU" time="0.101">
+  <properties/>
+  <testcase name="[1] 2023-10-22 15:28:20, 2023-10-26 10:30:59, time error" classname="FeeTest_v2" time="0.059"/>
+  <testcase name="[2] 2022-03-13 01:59:50, 2022-03-13 03:00:30, 0.05" classname="FeeTest_v2" time="0.003"/>
+  <testcase name="[3] 2022-03-13 01:55:00, 2022-03-13 03:10:50, 0.80" classname="FeeTest_v2" time="0.001"/>
+  <testcase name="[4] 2022-03-13 01:59:59, 2022-03-13 04:15:10, 6.60" classname="FeeTest_v2" time="0.001"/>
+  <testcase name="[5] 2022-11-06 01:59:30, 2022-11-06 01:00:20, time error" classname="FeeTest_v2" time="0.001"/>
+  <testcase name="[6] 2022-11-06 01:56:50, 2022-11-06 01:10:01, time error" classname="FeeTest_v2" time="0.001"/>
+  <testcase name="[7] 2022-11-06 01:30:30, 2022-11-06 03:40:40, 18.10" classname="FeeTest_v2" time="0.0"/>
+  <testcase name="[8] 2023-05-15 08:59:50, 2023-05-15 09:00:10, 0.05" classname="FeeTest_v2" time="0.002"/>
+  <testcase name="[9] 2023-07-06 15:55:15, 2023-07-06 16:10:20, 0.80" classname="FeeTest_v2" time="0.001"/>
+  <testcase name="[10] 2023-09-03 10:11:11, 2023-09-03 15:12:12, 29.20" classname="FeeTest_v2" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

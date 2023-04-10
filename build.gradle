@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    //id "com.github.spotbugs" version "$spotbugspluginVersion"
 }
 
 group 'org.example'
@@ -14,10 +15,16 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.8.2'
+    //spotbugsPlugins "com.h3xstream.findsecbugs:findsecbugs-plugin:$findsecbugspluginVersion"
 }
 
 test {
     useJUnitPlatform()
+}
+
+tasks.withType(JavaCompiler){
+    options.encoding("utf-8")
 }
 
 apply from: "$rootDir/gradle/config/scripts/style.gradle"
@@ -30,3 +37,32 @@ style.excludePackages = [
 ]
 style.excludeClasses = [
 ]
+
+//spotbugs {
+//    toolVersion = "$spotbugsVersion"
+//    ignoreFailures = false
+//    showStackTraces = true
+//    showProgress = true
+//    effort = 'default'
+//    reportLevel = 'low'
+//    reportsDir = file("$buildDir/reports/spotbugs")
+//    maxHeapSize = '2g'
+//    extraArgs = [ '-nested:false' ]
+//    jvmArgs = [ '-Duser.language=en' ]
+//}
+//
+//spotbugsTest {
+//    reports {
+//        html {
+//            stylesheet = 'fancy-hist.xsl'
+//        }
+//    }
+//}
+//
+//spotbugsMain {
+//    reports {
+//        html {
+//            stylesheet = 'fancy-hist.xsl'
+//        }
+//    }
+//}
