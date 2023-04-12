@@ -2,21 +2,21 @@
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
-<span class="fc" id="L5">public class TelFee {</span>
+<span class="nc" id="L5">public class TelFee {</span>
     public String get_telFee(String sd1,String sd2) {
         double telFee;
-<span class="fc" id="L8">        HoldingTime holdingTime = new HoldingTime(sd1,sd2);</span>
-<span class="fc" id="L9">        DecimalFormat df = new DecimalFormat(&quot;######0.00&quot;);</span>
-<span class="fc" id="L10">        long minute = holdingTime.getHoldingTime();</span>
-<span class="fc bfc" id="L11" title="All 2 branches covered.">        if(minute == -1) {</span>
-<span class="fc" id="L12">            return &quot;鏃堕棿閿欒锛屾椂闄愯寖鍥翠笉瀵癸紒&quot;;</span>
+<span class="nc" id="L8">        HoldingTime holdingTime = new HoldingTime(sd1,sd2);</span>
+<span class="nc" id="L9">        DecimalFormat df = new DecimalFormat(&quot;######0.00&quot;);</span>
+<span class="nc" id="L10">        long minute = holdingTime.getHoldingTime();</span>
+<span class="nc bnc" id="L11" title="All 2 branches missed.">        if(minute == -1) {</span>
+<span class="nc" id="L12">            return &quot;时间错误，时限范围不对！&quot;;</span>
         }
-<span class="fc bfc" id="L14" title="All 2 branches covered.">        else if(minute &lt;= 20) {</span>
-<span class="fc" id="L15">            telFee = 0.05*minute;</span>
+<span class="nc bnc" id="L14" title="All 2 branches missed.">        else if(minute &lt;= 20) {</span>
+<span class="nc" id="L15">            telFee = 0.05*minute;</span>
         } else {
-<span class="fc" id="L17">            telFee = 1.00 + (minute - 20)*0.1;</span>
+<span class="nc" id="L17">            telFee = 1.00 + (minute - 20)*0.1;</span>
         }
-<span class="fc" id="L19">        return df.format(telFee);</span>
+<span class="nc" id="L19">        return df.format(telFee);</span>
     }
 
 }  

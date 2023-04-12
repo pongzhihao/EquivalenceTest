@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     //id "com.github.spotbugs" version "$spotbugspluginVersion"
+    id "info.solidsoft.pitest" version "1.7.4"
 }
 
 group 'org.example'
@@ -8,7 +9,10 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenLocal()
-    maven{url 'https://maven.aliyun.com/repository/public'}
+    maven{url 'https://maven.aliyun.com/repository/public/'}
+    maven{url 'https://maven.aliyun.com/repository/google/'}
+    maven{url 'https://maven.aliyun.com/repository/jcenter/'}
+    maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
     mavenCentral()
 }
 
@@ -37,7 +41,13 @@ style.excludePackages = [
 ]
 style.excludeClasses = [
 ]
-
+pitest {
+    targetClasses = ['mimic.*']
+    threads = 4
+    outputFormats = ['HTML']
+    timestampedReports = true
+    junit5PluginVersion = '0.15'
+}
 //spotbugs {
 //    toolVersion = "$spotbugsVersion"
 //    ignoreFailures = false
